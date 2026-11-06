@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { Reveal } from "@/components/reveal";
 
 type PageIntroProps = {
   kicker: string;
@@ -9,7 +10,7 @@ type PageIntroProps = {
 export function PageIntro({ kicker, title, children }: PageIntroProps) {
   return (
     <header className="border-b border-line bg-card">
-      <div className="mx-auto max-w-6xl px-5 py-14 sm:px-8 md:py-20">
+      <Reveal className="mx-auto max-w-6xl px-5 py-14 sm:px-8 md:py-20">
         <p className="flex items-center gap-2 text-sm font-medium text-brand">
           <span className="inline-block h-2 w-2 bg-brand" aria-hidden="true" />
           {kicker}
@@ -20,7 +21,7 @@ export function PageIntro({ kicker, title, children }: PageIntroProps) {
         <div className="mt-6 max-w-2xl text-pretty text-lg leading-relaxed text-muted">
           {children}
         </div>
-      </div>
+      </Reveal>
     </header>
   );
 }

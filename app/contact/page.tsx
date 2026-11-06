@@ -32,7 +32,7 @@ export default function ContactPage() {
                 <li key={phone.href} className="flex flex-wrap items-baseline gap-x-4 gap-y-1">
                   <a
                     href={phone.href}
-                    className="font-serif text-2xl text-ink hover:text-brand"
+                    className="whitespace-nowrap font-serif text-2xl text-ink hover:text-brand"
                   >
                     {phone.display}
                   </a>

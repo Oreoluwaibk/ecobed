@@ -11,12 +11,12 @@ export const company = {
   email: "ecobedinsbrokersltd@gmail.com",
   phones: [
     {
-      display: "0701 297 4437",
+      display: "+234 701 297 4437",
       href: "tel:+2347012974437",
       whatsapp: "https://wa.me/2347012974437",
     },
     {
-      display: "0803 712 4475",
+      display: "+234 803 712 4475",
       href: "tel:+2348037124475",
       whatsapp: "https://wa.me/2348037124475",
     },

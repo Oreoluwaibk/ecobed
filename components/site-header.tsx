@@ -43,7 +43,7 @@ export function SiteHeader() {
               <a
                 key={phone.href}
                 href={phone.href}
-                className="font-medium hover:underline"
+                className="whitespace-nowrap font-medium hover:underline"
               >
                 {phone.display}
               </a>
@@ -58,7 +58,7 @@ export function SiteHeader() {
           className="flex min-w-0 items-center gap-2.5"
           aria-label={`${company.name} home`}
         >
-          <Logo className="h-11 w-11 shrink-0 text-brand" />
+          <Logo className="h-14 w-auto shrink-0" />
           <Wordmark compact className="min-w-0" />
         </Link>
 

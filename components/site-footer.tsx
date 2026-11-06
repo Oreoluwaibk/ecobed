@@ -9,7 +9,7 @@ export function SiteFooter() {
       <div className="mx-auto grid max-w-6xl gap-10 px-5 py-14 sm:px-8 md:grid-cols-2 lg:grid-cols-4">
         <div className="lg:col-span-1">
           <div className="flex items-center gap-2.5">
-            <Logo className="h-11 w-11 text-brand" />
+            <Logo className="h-14 w-auto shrink-0" />
             <Wordmark tone="light" />
           </div>
           <p className="mt-4 text-sm leading-relaxed text-white/75">
@@ -35,7 +35,7 @@ export function SiteFooter() {
           <ul className="mt-3 space-y-2 text-sm">
             {company.phones.map((phone) => (
               <li key={phone.href}>
-                <a className="hover:underline" href={phone.href}>
+                <a className="whitespace-nowrap hover:underline" href={phone.href}>
                   {phone.display}
                 </a>
               </li>

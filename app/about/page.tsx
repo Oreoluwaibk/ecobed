@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { OfficeList } from "@/components/offices";
 import { PageIntro } from "@/components/page-intro";
+import { Testimonials } from "@/components/testimonials";
 import { company, placementSteps, practiceLines } from "@/lib/company";
 
 export const metadata: Metadata = {
@@ -77,6 +78,8 @@ export default function AboutPage() {
         </div>
       </section>
 
+      <Testimonials />
+
       <section>
         <div className="mx-auto grid max-w-6xl gap-8 px-5 py-16 sm:px-8 md:grid-cols-[0.8fr_1.2fr] md:py-20">
           <div>
@@ -99,7 +102,7 @@ export default function AboutPage() {
                     <a
                       key={phone.href}
                       href={phone.href}
-                      className="block font-medium text-ink hover:text-brand"
+                      className="block whitespace-nowrap font-medium text-ink hover:text-brand"
                     >
                       {phone.display}
                     </a>

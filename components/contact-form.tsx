@@ -109,7 +109,7 @@ export function ContactForm() {
         type="submit"
         className="bg-brand px-5 py-3 text-sm font-semibold text-white hover:bg-brand-deep"
       >
-        Send by email
+        Open an email
       </button>
 
       {opened ? (

@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { OfficeList } from "@/components/offices";
+import { Entrance, Reveal } from "@/components/reveal";
+import { Testimonials } from "@/components/testimonials";
 import {
   brokerDuties,
   company,
@@ -23,7 +25,7 @@ export default function Home() {
   return (
     <>
       <section className="mx-auto grid max-w-6xl items-center gap-12 px-5 py-14 sm:px-8 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] lg:py-20">
-        <div className="min-w-0 border-l-[3px] border-brand pl-6">
+        <Entrance className="min-w-0 border-l-[3px] border-brand pl-6">
           <p className="text-sm font-semibold uppercase tracking-[0.16em] text-brand">
             {company.name}
           </p>
@@ -53,9 +55,9 @@ export default function Home() {
               Classes of business
             </Link>
           </div>
-        </div>
+        </Entrance>
 
-        <aside className="min-w-0 border border-line bg-card">
+        <Entrance delay={0.14} className="min-w-0 border border-line bg-card">
           <div className="border-b border-line bg-ink px-6 py-5 text-white">
             <p className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-white">
               <span className="inline-block h-2 w-2 bg-brand" aria-hidden="true" />
@@ -91,7 +93,7 @@ export default function Home() {
           <p className="border-t border-line px-6 py-4 text-sm text-muted">
             One firm. The same phones and the same email at both offices.
           </p>
-        </aside>
+        </Entrance>
       </section>
 
       <section className="bg-ink text-white">
@@ -128,7 +130,7 @@ export default function Home() {
       </section>
 
       <section className="border-b border-line bg-card">
-        <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 md:py-20">
+        <Reveal className="mx-auto max-w-6xl px-5 py-16 sm:px-8 md:py-20">
           <p className="text-sm font-semibold uppercase tracking-[0.16em] text-brand">
             What the firm does
           </p>
@@ -146,10 +148,10 @@ export default function Home() {
               </article>
             ))}
           </div>
-        </div>
+        </Reveal>
       </section>
 
-      <section className="mx-auto max-w-6xl px-5 py-16 sm:px-8 md:py-20">
+      <Reveal className="mx-auto max-w-6xl px-5 py-16 sm:px-8 md:py-20">
         <div className="flex flex-wrap items-end justify-between gap-4">
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.16em] text-brand">
@@ -189,10 +191,10 @@ export default function Home() {
             </li>
           ))}
         </ol>
-      </section>
+      </Reveal>
 
       <section className="border-y border-line bg-card">
-        <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 md:py-20">
+        <Reveal className="mx-auto max-w-6xl px-5 py-16 sm:px-8 md:py-20">
           <h2 className="font-serif text-3xl text-ink sm:text-4xl">
             How the brokerage handles an instruction
           </h2>
@@ -207,8 +209,10 @@ export default function Home() {
               </li>
             ))}
           </ol>
-        </div>
+        </Reveal>
       </section>
+
+      <Testimonials />
 
       <section>
         <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 md:py-20">
